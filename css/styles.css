@@ -1,0 +1,13 @@
+section {
+    background-color: #f5f5f7;
+}
+
+.horizontal-line {
+    width: 65%;
+}
+
+.input-size {
+    background-color: #f5f5f7;
+    border: none;
+    width: 160px;
+}
