@@ -6,8 +6,9 @@ section {
     width: 65%;
 }
 
-.input-size {
+.input-text {
     background-color: #f5f5f7;
     border: none;
     width: 160px;
+    font-weight: bold;
 }
