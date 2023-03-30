@@ -87,6 +87,55 @@ function displayTable() {
 // For Details
 
 // ------------- TAB-1 ----------------
+let tableDetailsInfoTab1 = [
+    {
+        id: 1,
+        LC_PI_No: "LP02222023",
+        UD_EXP_No: "BGMEADHK004AMDNO/001",
+        UP_No: "12212304440",
+    },
+    {
+        id: 2,
+        LC_PI_No: "LP01602023",
+        UD_EXP_No: "BGMEADHK004AMDNO/001",
+        UP_No: "1221130440",
+    },
+];
+
+function deleteItemsTab1(id) {
+    tableDetailsInfoTab1 = tableDetailsInfoTab1.filter(
+        (item) => item.id !== id
+    );
+    if (tableDetailsInfoTab1.length === 0) {
+        document
+            .getElementById("table-export-details1")
+            .classList.add("d-none");
+    } else {
+        document
+            .getElementById("table-export-details1")
+            .classList.remove("d-none");
+    }
+
+    displayTableTab1(); // call a function to display the updated table
+}
+
+function displayTableTab1() {
+    const tableBody = document
+        .getElementById("table-export-details1")
+        .querySelector("tbody");
+    tableBody.innerHTML = "";
+    tableDetailsInfoTab1.forEach((data) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${data.LC_PI_No}</td>
+          <td>${data.UD_EXP_No}</td>
+          <td>${data.UP_No}</td>
+          <td><button class="border-0" onclick="deleteItemsTab1(${data.id})"><i class="fa-solid fa-pen-to-square"></i></button></td>
+          <td><button class="border-0" onclick="deleteItemsTab1(${data.id})"><i class="fa-solid fa-xmark" style="color: #d91212;"></i></button></td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
 
 // ------------- TAB-2 ----------------
 let tableDetailsInfoTab2 = [
