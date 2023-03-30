@@ -130,7 +130,7 @@ function displayTableTab1() {
           <td>${data.LC_PI_No}</td>
           <td>${data.UD_EXP_No}</td>
           <td>${data.UP_No}</td>
-          <td><button class="border-0" onclick="deleteItemsTab1(${data.id})"><i class="fa-solid fa-pen-to-square"></i></button></td>
+          <td><button class="border-0" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="fa-solid fa-pen-to-square"></i></button></td>
           <td><button class="border-0" onclick="deleteItemsTab1(${data.id})"><i class="fa-solid fa-xmark" style="color: #d91212;"></i></button></td>
         `;
         tableBody.appendChild(row);
@@ -195,14 +195,14 @@ function displayTableTab2() {
     <td>${data.Customer_Date} CM</td>
     <td>${data.Negotiation_Date}</td>
     <td>${data.Maturity_Date}</td>
-    <td><button class="border-0" onclick="deleteItemsTab2(${data.id})"><i class="fa-solid fa-pen-to-square"></i></button></td>
+    <td><button class="border-0" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="fa-solid fa-pen-to-square"></i></button></td>
     <td><button class="border-0" onclick="deleteItemsTab2(${data.id})"><i class="fa-solid fa-xmark" style="color: #d91212;"></i></button></td>
   `;
         tableBody.appendChild(row);
     });
 }
 
-// ------------- TAB-1 ----------------
+// ------------- TAB-3 ----------------
 let tableDetailsInfoTab3 = [
     {
         id: 1,
@@ -245,7 +245,7 @@ function displayTableTab3() {
         <td>${data.Adjusted_Value}</td>
         <td><button class="border-0"><i class="fa-solid fa-square-check" style="color: #a1a1a1;"></i></button></td>
         <td><button class="border-0"><i class="fa-solid fa-square-check" style="color: #a1a1a1;"></i></button></td>
-        <td><button class="border-0" onclick="viewItemsTab3(${data.id})"><i class="fa-solid fa-eye"></i></button></td>
+        <td><button class="border-0" data-bs-toggle="modal" data-bs-target="#exampleModal3"><i class="fa-solid fa-eye"></i></button></td>
         <td><button class="border-0" onclick="deleteItemsTab3(${data.id})"><i class="fa-solid fa-xmark" style="color: #d91212;"></i></button></td>
       `;
         tableBody.appendChild(row);
