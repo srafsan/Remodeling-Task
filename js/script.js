@@ -201,3 +201,53 @@ function displayTableTab2() {
         tableBody.appendChild(row);
     });
 }
+
+// ------------- TAB-1 ----------------
+let tableDetailsInfoTab3 = [
+    {
+        id: 1,
+        Order_No: "OD02342023",
+        Adjusted_Value: "4887.36",
+    },
+    {
+        id: 2,
+        Order_No: "OD03562023",
+        Adjusted_Value: "1326.85",
+    },
+];
+
+function deleteItemsTab3(id) {
+    tableDetailsInfoTab3 = tableDetailsInfoTab3.filter(
+        (item) => item.id !== id
+    );
+    if (tableDetailsInfoTab3.length === 0) {
+        document
+            .getElementById("table-export-details3")
+            .classList.add("d-none");
+    } else {
+        document
+            .getElementById("table-export-details3")
+            .classList.remove("d-none");
+    }
+
+    displayTableTab3(); // call a function to display the updated table
+}
+
+function displayTableTab3() {
+    const tableBody = document
+        .getElementById("table-export-details3")
+        .querySelector("tbody");
+    tableBody.innerHTML = "";
+    tableDetailsInfoTab3.forEach((data) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+        <td>${data.Order_No}</td>
+        <td>${data.Adjusted_Value}</td>
+        <td><button class="border-0"><i class="fa-solid fa-square-check" style="color: #a1a1a1;"></i></button></td>
+        <td><button class="border-0"><i class="fa-solid fa-square-check" style="color: #a1a1a1;"></i></button></td>
+        <td><button class="border-0" onclick="viewItemsTab3(${data.id})"><i class="fa-solid fa-eye"></i></button></td>
+        <td><button class="border-0" onclick="deleteItemsTab3(${data.id})"><i class="fa-solid fa-xmark" style="color: #d91212;"></i></button></td>
+      `;
+        tableBody.appendChild(row);
+    });
+}
