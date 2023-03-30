@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="row">
+<body class="row" onload="displayTable()">
   <!-- Sidebar -->
   <nav class="col-4 d-flex flex-column flex-shrink-0 p-3 bg-light fixed-top" style="width: 280px;">
     <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
@@ -438,7 +438,7 @@
 
     <!-- Tables -->
     <div class="container">
-      <table class="table">
+      <table class="table" id="table-sales-details">
         <thead class="table-info">
           <tr>
             <th scope="col">Product</th>
@@ -448,7 +448,7 @@
             <th scope="col">Delete</th>
           </tr>
         </thead>
-        <tbody id="table-details">
+        <tbody>
 
         </tbody>
       </table>
