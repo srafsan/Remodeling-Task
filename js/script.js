@@ -1,4 +1,6 @@
-// For Sales
+// ----------------//
+// For Sales       //
+// ----------------//
 
 let tableSalesInfo = [
     {
@@ -84,9 +86,11 @@ function displayTable() {
     });
 }
 
-// For Details
+// ----------------//
+// For Details     //
+//-----------------//
 
-// ------------- TAB-1 ----------------
+// TAB-1
 let tableDetailsInfoTab1 = [
     {
         id: 1,
@@ -137,7 +141,7 @@ function displayTableTab1() {
     });
 }
 
-// ------------- TAB-2 ----------------
+// TAB-2
 let tableDetailsInfoTab2 = [
     {
         id: 1,
@@ -202,7 +206,7 @@ function displayTableTab2() {
     });
 }
 
-// ------------- TAB-3 ----------------
+// TAB-3
 let tableDetailsInfoTab3 = [
     {
         id: 1,
